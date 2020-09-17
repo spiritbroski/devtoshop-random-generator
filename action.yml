@@ -19,5 +19,5 @@ quotation marks'
 runs:
   using: "composite"
   steps: 
-    - run: ${{ github.action_path }}/push.sh ${{ inputs.budget }} ${{ inputs.personal_token }} ${{ inputs.github_repo }}
+    - run: ${{ github.action_path }}/push.sh ${{ inputs.budget }} ${{ inputs.personal_token }} ${{ inputs.github_repo }} ${{ github.action_path }}
       shell: bash

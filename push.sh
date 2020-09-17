@@ -1,10 +1,10 @@
 #!/bin/bash
 set -x
 set -e
-python main.py $1
+python $4/main.py $1
 git clone https://$2@github.com/$3.git panda
-cp DEVTOSHOP.md panda
-cd panda
+cp DEVTOSHOP.md $4/panda
+cd $4/panda
 export BRANCH_NAME=devto-shop-random-generator
 git --version
 git config --global user.email "no-reply@gmail.com"
