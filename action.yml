@@ -1,15 +1,22 @@
-name: 'Github Greeter'
-description: 'Greets users when they make there first issue.'
-author: 'AnishAnne'
+name: 'Devto shop item random generator'
+description: 'generate readme that has list of item that we can buy from dev.to shop on a budget that we have'
+author: 'spiritbro1'
 branding:
   icon: activity
   color: blue
 inputs:
-  repo-token:
-    description: 'Token for the repo. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
+  budget:
+    description: 'budget in usd should be greater than $3'
     required: true
-  message:
-    description: 'Message to post on an individuals first pull request'
+  personal_token:
+    description: 'personal github token to create a pull request to your repo'
+    required: true
+  github_repo:
+    description: 'your github repo for example "spiritbro1/example-devto" without 
+quotation marks'
+    required: true
 runs:
-  using: 'node12'
-  main: 'lib/main.js'
+  using: "composite"
+  steps: 
+    - run: ${{ github.action_path }}/push.sh ${{ inputs.budget }} ${{ inputs.personal_token }} ${{ inputs.github_repo }}
+      shell: bash
