@@ -4,10 +4,13 @@ import random
 import sys
 budget=float(sys.argv[1]) if sys.argv[1] else 0
 remainingBudget=budget
-
-sqliteConnection = sqlite3.connect('sqlite.db')
-randomItem=[]
 cursor=None
+sqliteConnection = sqlite3.connect(sys.argv[2]+'/sqlite.db')
+# sqlite_create_table_query = f'''SELECT * FROM devto WHERE price < {remainingBudget} ORDER BY price ASC''' 
+# cursor = sqliteConnection.cursor()
+# cursor.execute(sqlite_create_table_query)
+randomItem=[]
+
 while True:
     if budget < 10:
         break
