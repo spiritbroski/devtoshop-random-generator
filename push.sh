@@ -3,6 +3,7 @@ set -x
 set -e
 python3 $4/main.py $1 $4
 git clone https://$2@github.com/$3.git panda
+ls
 cp DEVTOSHOP.md $4/panda
 cd $4/panda
 export BRANCH_NAME=devto-shop-random-generator
