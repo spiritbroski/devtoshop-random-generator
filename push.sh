@@ -1,7 +1,6 @@
 #!/bin/bash
 set -x
 set -e
-pip install requests 
 python main.py $1
 git clone https://$2@github.com/$3.git panda
 cp DEVTOSHOP.md panda

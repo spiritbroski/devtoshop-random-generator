@@ -6,7 +6,7 @@ branding:
   color: blue
 inputs:
   budget:
-    description: 'budget in usd should be greater than $3'
+    description: 'budget in usd should be greater than or equal $10'
     required: true
   personal_token:
     description: 'personal github token to create a pull request to your repo'
