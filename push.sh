@@ -8,8 +8,8 @@ cp DEVTOSHOP.md panda
 cd panda
 export BRANCH_NAME=devto-shop-random-generator
 git --version
-git config --global user.email "no-reply@gmail.com"
-git config --global user.name "Devto Shop Random Generator"
+git config --global user.email "rinoakbr@gmail.com"
+git config --global user.name "spiritbro1"
 git branch -d $BRANCH_NAME || true
 git checkout -b $BRANCH_NAME
 git add --all
